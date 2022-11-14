@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,12 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin.index');
     })->name('dashboard');
 });
+
+Route::get('/user/logout', function () {
+    return view('welcome');
+});
+
+Route::get('/user/logout', [SettingsController::class, 'logout_user'])->name('user.logout');
