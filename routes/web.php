@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\MultiImageController;
+use App\Http\Controllers\SliderController;
+use App\Models\User;
+use App\Models\Brand;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +21,10 @@ use App\Http\Controllers\SettingsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $brands = Brand::latest()->get();
+    return view('home', compact('brands'));
 });
+
 
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
@@ -37,3 +45,56 @@ Route::get('/user/logout', function () {
 });
 
 Route::get('/user/logout', [SettingsController::class, 'logout_user'])->name('user.logout');
+
+//Category controller
+Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
+
+Route::post('/category/add', [CategoryController::class, 'AddCat'])->name('persist.category');
+
+Route::get('/category/edit/{id}', [CategoryController::class, 'EditCat']);
+
+Route::post('/category/update/{id}', [CategoryController::class, 'UpdateCat']);
+
+Route::get('/softdelete/category/{id}', [CategoryController::class, 'SoftdeleteCat']);
+
+Route::get('/category/restore/{id}', [CategoryController::class, 'RestoreCat']);
+
+Route::get('/permanent_delete/category/{id}', [CategoryController::class, 'PermanentdeleteCat']);
+
+
+//Brand controller
+Route::get('/all/brands', [BrandController::class, 'AllBrands'])->name('all.brands');
+
+Route::post('/brand/add', [BrandController::class, 'AddBrand'])->name('persist.brand');
+
+Route::get('/brand/edit/{id}', [BrandController::class, 'EditBrand']);
+
+Route::post('/brand/update/{id}', [BrandController::class, 'UpdateBrand']);
+
+Route::get('/softdelete/brand/{id}', [BrandController::class, 'SoftdeleteBrand']);
+
+Route::get('/brand/restore/{id}', [BrandController::class, 'RestoreBrand']);
+
+Route::get('/permanent_delete/brand/{id}', [BrandController::class, 'PermanentdeleteBrand']);
+
+
+//Multi-Images Controller Routes
+Route::get('/all/images', [MultiImageController::class, 'AllImages'])->name('all.images');
+
+Route::post('/multi-images/add', [MultiImageController::class, 'AddMultiImages'])->name('persist.images');
+
+
+//Slider Controller Routes
+Route::get('/all/sliders', [SliderController::class, 'AllSliders'])->name('all.sliders');
+
+Route::post('/slider/add', [SliderController::class, 'AddSlider'])->name('persist.slider');
+
+Route::get('/slider/edit/{id}', [SliderController::class, 'EditSlider']);
+
+Route::post('/slider/update/{id}', [SliderController::class, 'UpdateSlider']);
+
+Route::get('/softdelete/slider/{id}', [SliderController::class, 'SoftdeleteSlider']);
+
+Route::get('/slider/restore/{id}', [SliderController::class, 'RestoreSlider']);
+
+Route::get('/permanent_delete/slider/{id}', [SliderController::class, 'PermanentdeleteSlider']);

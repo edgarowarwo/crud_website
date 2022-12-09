@@ -28,53 +28,54 @@
 
         <!-- sidebar menu -->
         <ul class="nav sidebar-inner" id="sidebar-menu">
-          
-
-          
-            <li  class="has-sub active expand" >
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard"
+            <li  class="has-sub active" >
+              <a class="sidenav-item-link" href="{{ route('dashboard') }}" 
                 aria-expanded="false" aria-controls="dashboard">
                 <i class="mdi mdi-view-dashboard-outline"></i>
-                <span class="nav-text">Dashboard</span> <b class="caret"></b>
+                <span class="nav-text">Dashboard</span> 
+              </a>             
+            </li>
+
+            <li  class="has-sub" >
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard"
+                aria-expanded="false" aria-controls="dashboard">
+                <i class="mdi mdi-home"></i>
+                <span class="nav-text">Home Page</span> <b class="caret"></b>
               </a>
-              <ul  class="collapse show"  id="dashboard"
+              <ul  class="collapse"  id="dashboard"
                 data-parent="#sidebar-menu">
-                <div class="sub-menu">
-                  
-                  
-                    
+                <div class="sub-menu">  
                       <li  class="active" >
-                        <a class="sidenav-item-link" href="index.html">
-                          <span class="nav-text">Ecommerce</span>
+                        <a class="sidenav-item-link" href="{{ route('all.sliders') }}">
+                          <span class="nav-text">Slider</span>
                           
                         </a>
                       </li>
-                    
-                  
 
-                  
-                  
-                    
+                      <li  class="active" >
+                        <a class="sidenav-item-link" href="">
+                          <span class="nav-text">About</span>
+                          
+                        </a>
+                      </li>
+
+                      <li  class="active" >
+                        <a class="sidenav-item-link" href="">
+                          <span class="nav-text">Portfolio</span>
+                          
+                        </a>
+                      </li>
+  
                       <li >
-                        <a class="sidenav-item-link" href="analytics.html">
-                          <span class="nav-text">Analytics</span>
-                          
-                          <span class="badge badge-success">new</span>
+                        <a class="sidenav-item-link" href="{{ route('all.brands') }}">
+                          <span class="nav-text">Brands</span>                          
                           
                         </a>
                       </li>
-                    
-                  
-
-                  
                 </div>
               </ul>
             </li>
-          
 
-          
-
-          
             <li  class="has-sub" >
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#ui-elements"
                 aria-expanded="false" aria-controls="ui-elements">
@@ -177,10 +178,7 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#icons"
                       aria-expanded="false" aria-controls="icons">
@@ -200,10 +198,7 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#forms"
                       aria-expanded="false" aria-controls="forms">
@@ -235,10 +230,7 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#maps"
                       aria-expanded="false" aria-controls="maps">
@@ -258,10 +250,7 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#widgets"
                       aria-expanded="false" aria-controls="widgets">
@@ -281,17 +270,11 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
                 </div>
               </ul>
             </li>
-          
 
-          
-
-          
             <li  class="has-sub" >
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#charts"
                 aria-expanded="false" aria-controls="charts">
@@ -301,27 +284,18 @@
               <ul  class="collapse"  id="charts"
                 data-parent="#sidebar-menu">
                 <div class="sub-menu">
-                  
-                  
-                    
+
                       <li >
                         <a class="sidenav-item-link" href="chartjs.html">
                           <span class="nav-text">ChartJS</span>
                           
                         </a>
                       </li>
-                    
-                  
 
-                  
                 </div>
               </ul>
             </li>
-          
 
-          
-
-          
             <li  class="has-sub" >
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#pages"
                 aria-expanded="false" aria-controls="pages">
@@ -331,20 +305,14 @@
               <ul  class="collapse"  id="pages"
                 data-parent="#sidebar-menu">
                 <div class="sub-menu">
-                  
-                  
-                    
+
                       <li >
                         <a class="sidenav-item-link" href="user-profile.html">
                           <span class="nav-text">User Profile</span>
                           
                         </a>
                       </li>
-                    
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#authentication"
                       aria-expanded="false" aria-controls="authentication">
@@ -364,10 +332,7 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#others"
                       aria-expanded="false" aria-controls="others">
@@ -387,17 +352,11 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
                 </div>
               </ul>
             </li>
-          
 
-          
-
-          
             <li  class="has-sub" >
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#documentation"
                 aria-expanded="false" aria-controls="documentation">
@@ -407,62 +366,36 @@
               <ul  class="collapse"  id="documentation"
                 data-parent="#sidebar-menu">
                 <div class="sub-menu">
-                  
-                  
-                    
+
                       <li class="section-title">
                         Getting Started
                       </li>
-                    
-                  
 
-                  
-                  
-                    
                       <li >
                         <a class="sidenav-item-link" href="introduction.html">
                           <span class="nav-text">Introduction</span>
                           
                         </a>
                       </li>
-                    
-                  
 
-                  
-                  
-                    
                       <li >
                         <a class="sidenav-item-link" href="setup.html">
                           <span class="nav-text">Setup</span>
                           
                         </a>
                       </li>
-                    
-                  
 
-                  
-                  
-                    
                       <li >
                         <a class="sidenav-item-link" href="customization.html">
                           <span class="nav-text">Customization</span>
                           
                         </a>
                       </li>
-                    
-                  
 
-                  
-                  
-                    
                       <li class="section-title">
                         Layouts
                       </li>
-                    
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#headers"
                       aria-expanded="false" aria-controls="headers">
@@ -490,10 +423,7 @@
                       </div>
                     </ul>
                   </li>
-                  
 
-                  
-                  
                   <li  class="has-sub" >
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#sidebar-navs"
                       aria-expanded="false" aria-controls="sidebar-navs">
@@ -529,27 +459,18 @@
                       </div>
                     </ul>
                   </li>
-                  
-
-                  
-                  
-                    
+  
                       <li >
                         <a class="sidenav-item-link" href="rtl.html">
                           <span class="nav-text">RTL Direction</span>
                           
                         </a>
                       </li>
-                    
-                  
 
-                  
                 </div>
               </ul>
             </li>
-          
 
-          
         </ul>
 
       </div>
